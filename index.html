@@ -5,48 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Eléctricos y de Construcción</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-}
-.hero {
-    background: url('background.jpg') center/cover;
-    padding: 100px 0;
-    color: rgb(60, 72, 150);
-}
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #000000;
-}
-.services .row div{
-    padding: 15px;
-    border-radius: 8px;
-    background: #ffffff;
-    margin: 10px 0;
-}
-.other-services .row div {
-    padding: 15px;
-    border-radius: 8px;
-    background: /*#244666*/ transparent(0,0,0);
-    margin: 10px 0;
-    
-}
-.btn-success {
-    background-color: #0081fa;
-    border: none;
-}
-.btn-warning {
-    background-color: #ffc107;
-    border: none;
-}
-.other-services .hero text-white text-center py-5 {
-    background: transparent(0,0,0);/*#343a40;*/
-    /*filter: blur(1px);*/
-    padding: 50px 0;
-}
-    </style>
+
 </head>
 <body>
     <header class="bg-light p-3">
@@ -85,17 +46,46 @@
         </div>
     </section>
     
-    <section class="other-services bg-dark text-white text-center py-5">
-        <div class="container">
-            <h2>Otros servicios que ofrecemos</h2>
-            <div class="row">
-                <div class="col-md-4">Pintura - Aplicación de pintura interior y exterior</div>
-                <div class="col-md-4">Albañilería - Construcción y reparación de estructuras</div>
-                <div class="col-md-4">Sanitaria - Instalación y reparación de tuberías y sistemas sanitarios</div>
+    <section class="servicios text-center py-5">
+        <h2 class="fw-bold">Otros servicios que ofrecemos</h2>
+
+        <div class="container position-relative">
+            <!-- Botón Izquierda -->
+            <button class="btn-prev">
+                &#10094;
+            </button>
+            <!-- Carrusel -->
+            <div class="carrusel-container">
+                <div class="carrusel">
+                    <div class="card">
+                        <div class="icono">🎨</div>
+                        <h3>Pintura</h3>
+                        <p>Aplicación de pintura interior y exterior con acabados profesionales.</p>
+                        <button class="btn btn-dark">Solicitar Servicio</button>
+                    </div>
+                    <div class="card">
+                        <div class="icono">🧱</div>
+                        <h3>Albañilería</h3>
+                        <p>Construcción y reparación de muros, pisos y estructuras.</p>
+                        <button class="btn btn-dark">Solicitar Servicio</button>
+                    </div>
+                    <div class="card">
+                        <div class="icono">🚰</div>
+                        <h3>Sanitaria</h3>
+                        <p>Instalación y reparación de tuberías, grifos y sistemas sanitarios.</p>
+                        <button class="btn btn-dark">Solicitar Servicio</button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Botón Derecha -->
+            <button class="btn-next">
+                &#10095;
+            </button>
         </div>
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

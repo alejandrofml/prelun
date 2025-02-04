@@ -1,0 +1,104 @@
+
+body {
+font-family: Arial, sans-serif;
+}
+.hero {
+background: url('background.jpg') center/cover;
+padding: 100px 0;
+color: rgb(60, 72, 150);
+}
+.hero h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: #000000;
+}
+.services .row div{
+padding: 15px;
+border-radius: 8px;
+background: #ffffff;
+margin: 10px 0;
+}
+.other-services .row div {
+padding: 15px;
+border-radius: 8px;
+background: /*#244666*/ transparent(0,0,0);
+margin: 10px 0;
+
+}
+.btn-success {
+background-color: #0081fa;
+border: none;
+}
+.btn-warning {
+background-color: #ffc107;
+border: none;
+}
+
+/*------------------------CAROUSSEL-------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.servicios {
+    background: #b3b3b3;
+    padding: 50px 0;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carrusel-container {
+    width: 300px; /* Se ajusta al tamaño de una sola tarjeta */
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+/* Botones de navegación */
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
