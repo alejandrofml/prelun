@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+    list-style: none;
+}
 
 body {
-font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 .hero {
 background: url('background.jpg') center/cover;
@@ -33,13 +42,104 @@ border: none;
 background-color: #ffc107;
 border: none;
 }
+/*------------------------------------------------Menu-------------------------*/
+.back{
+    padding: 32px 0;
+    background-color: #2a394f;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #1a2433;
+}
+
+#menu{
+    display: none;
+}
+
+/*.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}*/
+
+.menu-label {
+    cursor: pointer;
+    display: none;
+}
+/* Responsive NAVBAR */
+@media (max-width: 768px) {
+    .menu{
+        padding: 30px;
+    }
+
+    .menu-label{
+        display: initial;
+    }
+
+    .back{
+        padding: 40px 0;
+    }
+    
+    .menu .navbar {
+        position: absolute;
+        width: 100%;
+        background-color: #2a394f;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu:checked + .navbar ul {
+        left: 0;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+}
 
 /*------------------------CAROUSSEL-------------------------*/
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
 .servicios {
     background: #b3b3b3;
@@ -48,6 +148,8 @@ body {
 }
 
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +205,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
@@ -125,4 +227,5 @@ body {
     .main p {
         font-size: 1.1em;
     }
-}
+}*/
+
