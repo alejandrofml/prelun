@@ -86,19 +86,22 @@ border: none;
     display: none;
 }
 
-/*.menu-icon {
+.menu-icono {
     font-size: 24px;
     color: #fff;
     cursor: pointer;
     display: none;
-}*/
+}
 
 .menu-label {
     cursor: pointer;
     display: none;
 }
 /* Responsive NAVBAR */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .menu-icono {
+        display: block;
+    }
     .menu{
         padding: 30px;
     }
@@ -113,7 +116,6 @@ border: none;
     
     .menu .navbar {
         position: absolute;
-        width: 100%;
         background-color: #2a394f;
         top: 100%;
         left: 0;
@@ -123,15 +125,6 @@ border: none;
 
     .menu .navbar ul li {
         width: 100%;
-    }
-
-    .menu .navbar ul li a {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    #menu:checked + .navbar ul {
-        left: 0;
     }
 
     #menu:checked ~ .navbar {
