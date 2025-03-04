@@ -1,224 +1,163 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: 0;
-    text-decoration: none;
-    list-style: none;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+body{
+    font-family: 'Verdana', sans-serif;
+    background-color: #f3f3f3;
+    text-align: center;
 }
-.hero {
-background: url('background.jpg') center/cover;
-padding: 100px 0;
-color: rgb(60, 72, 150);
-}
-.hero h2 {
-font-size: 2.5rem;
-margin-bottom: 20px;
-color: #000000;
-}
-.services .row div{
-padding: 15px;
-border-radius: 8px;
-background: #ffffff;
-margin: 10px 0;
-}
-.other-services .row div {
-padding: 15px;
-border-radius: 8px;
-background: /*#244666*/ transparent(0,0,0);
-margin: 10px 0;
-
-}
-.btn-success {
-background-color: #0081fa;
-border: none;
-}
-.btn-warning {
-background-color: #ffc107;
-border: none;
-}
-/*------------------------------------------------Menu-------------------------*/
-.back{
-    padding: 32px 0;
-    background-color: #2a394f;
-}
-
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    color: #fff;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.menu .navbar ul li {
+.carousel-container {
     position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #ffffff;
-    display: block;
-}
-
-.menu .navbar ul li a:hover {
-    color: #1a2433;
-}
-
-#menu{
-    display: none;
-}
-
-.menu-icono {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-}
-
-.menu-label {
-    cursor: pointer;
-    display: none;
-}
-/* Responsive NAVBAR */
-@media screen and (max-width: 768px) {
-    .menu-icono {
-        display: block;
-    }
-    .menu{
-        padding: 30px;
-    }
-
-    .menu-label{
-        display: initial;
-    }
-
-    .back{
-        padding: 40px 0;
-    }
-    
-    .menu .navbar {
-        position: absolute;
-        background-color: #2a394f;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-    }
-
-    #menu:checked ~ .navbar {
-        display: initial;
-    }
-}
-
-/*------------------------CAROUSSEL-------------------------*/
-
-.servicios {
-    background: #b3b3b3;
-    padding: 50px 0;
-    position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.carrusel-container {
-    width: 300px; /* Se ajusta al tamaño de una sola tarjeta */
+    width: 80%;
+    margin: auto;
     overflow: hidden;
-    position: relative;
 }
-
-.carrusel {
+.carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 .card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(33.33% - 10px);
+    margin: 5px;
     background: white;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas pasen a otra línea si no caben */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espaciado entre tarjetas */
 }
 
-.icono {
-    font-size: 40px;
-    margin-bottom: 10px;
+
+section .card{
+    position: relative;
+    width: 215px;
+    height: 315px;
+    background-color: #fff;
+    margin: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    transition: 05s ease-in-out;
 }
 
-.btn {
+section .card ul{
+    position: absolute;
+    top: 130px;
+    color: white;
+    font-size: 14px;
+    display: none;
+}
+
+section .card:hover ul{
+    
+    display: block;
+    transition: 5s ease-in;
+}
+section .card:hover .circle{
+    clip-path: circle(600px);
+}
+.card:nth-child(1) .circle{
+    background-color: #fcb045;
+}
+.card:nth-child(2) .circle{
+    background-color: #fc4343;
+}
+.card:nth-child(3) .circle{
+    background-color: #9848cd;
+}
+.card:nth-child(4) .circle{
+    background-color: #48cd7d;
+}
+.card:nth-child(5) .circle{
+    background-color: #cd4884;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    max-width: 1500px;
+}
+
+.card .content p{
+    position: absolute;
+    top: 130px;
+    transition: 0.5s ease-in-out;
+    margin: 0 15px 0 15px;
+    color: gray;
+    font-size: 14px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.card .circle h2{
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 250px;
+    z-index: 10;
+}
+
+.card .circle img{
+    color: red;
+    position: absolute;
+    bottom: 225px;
+    z-index: 10;
+}
+
+.card:hover .circle{
+    height: 100%;
+    border-radius: 0;
+}
+
+.card:hover .content p{
+    color: white;
+}
+
+.circle img {
+    width: 80px;
+    height: 80px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
-
-/* Botones de navegación */
-.btn-prev, .btn-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
+button {
+    padding: 10px;
     border: none;
-    font-size: 30px;
+    background: yellow;
     cursor: pointer;
 }
-
-.btn-prev {
-    left: 10px;
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 100%;
+    }
 }
 
-.btn-next {
-    right: 10px;
-}
 
-/* Responsive */
-/*@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    .main h2 {
-        font-size: 2em;
-    }
-
-    .main p {
-        font-size: 1.1em;
-    }
-}*/
 

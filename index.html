@@ -1,96 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Eléctricos y de Construcción</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-
+    <title>Orlux</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="back">
-            <div class="menu container d-flex justify-content-between align-items-center">
-                <a href="#" class="logo">LOGO</a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="img/menu.png" class="menu-icono" alt="">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+<body class="bg-gray-200 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-xl font-bold">ORILUX</h1>
+            <button id="menu-toggle" class="md:hidden block text-gray-600 focus:outline-none">
+                ☰
+            </button>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#Inicio" class="hover:text-blue-500">Inicio</a>
+                <a href="#Servicios" class="hover:text-blue-500">Servicios</a>
+                <a href="#Proyectos" class="hover:text-blue-500">Proyectos</a>
+                <a href="#Nosotros" class="hover:text-blue-500">Nosotros</a>
+                <a href="#Contacto" class="hover:text-blue-500">Contacto</a>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden flex flex-col items-center md:hidden bg-white py-2">
+            <a href="#Inicio" class="py-2">Inicio</a>
+            <a href="#Servicios" class="py-2">Servicios</a>
+            <a href="#Proyectos" class="py-2">Proyectos</a>
+            <a href="#Nosotros" class="py-2">Nosotros</a>
+            <a href="#Contacto" class="py-2">Contacto</a>
         </div>
     </header>
-    <section class="hero text-white text-center p-5">
-        <div class="container">
-            <h2>Soluciones eléctricas y de construcción con calidad y confianza.</h2>
-            <a href="#" class="btn btn-success mt-3">Consultar</a>
-        </div>
-    </section>
-    
-    <section class="services text-center py-5">
-        <div class="container">
-            <h2>Nuestros servicios</h2>
-            <div class="row">
-                <div class="col-md-2">Instalaciones Eléctricas</div>
-                <div class="col-md-2">Reparaciones Eléctricas</div>
-                <div class="col-md-2">Protección y Seguridad Eléctrica</div>
-                <div class="col-md-2">Mantenimiento Eléctrico</div>
-                <div class="col-md-2">Gestión y Suministro de Materiales</div>
-            </div>
-            <a href="#" class="btn btn-warning mt-3">Consultar Cotización</a>
-        </div>
-    </section>
-    
-    <section class="servicios text-center py-5">
-        <h2 class="fw-bold">Otros servicios que ofrecemos</h2>
 
-        <div class="container position-relative">
-            <!-- Botón Izquierda -->
-            <button class="btn-prev">
-                &#10094;
-            </button>
-            <!-- Carrusel -->
-            <div class="carrusel-container">
-                <div class="carrusel">
-                    <div class="card">
-                        <div class="icono">🎨</div>
-                        <h3>Pintura</h3>
-                        <p>Aplicación de pintura interior y exterior con acabados profesionales.</p>
-                        <button class="btn btn-dark">Solicitar Servicio</button>
-                    </div>
-                    <div class="card">
-                        <div class="icono">🧱</div>
-                        <h3>Albañilería</h3>
-                        <p>Construcción y reparación de muros, pisos y estructuras.</p>
-                        <button class="btn btn-dark">Solicitar Servicio</button>
-                    </div>
-                    <div class="card">
-                        <div class="icono">🚰</div>
-                        <h3>Sanitaria</h3>
-                        <p>Instalación y reparación de tuberías, grifos y sistemas sanitarios.</p>
-                        <button class="btn btn-dark">Solicitar Servicio</button>
-                    </div>
+    <!-- Hero Section -->
+    <section id="Inicio" class="h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('img/HeaderFondo.png'); background-attachment: fixed;">
+        <div class="p-8 rounded-lg max-w-lg">
+            <h2 class="text-4xl md:text-5xl font-bold">Soluciones eléctricas y de construcción</h2>
+            <h3 class="mt-4 text-lg">Con calidad y confianza.</h3>
+            <button href="#Servicios" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700">CONSULTAR</button>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="Servicios" class="py-16 bg-gray-100 text-center">
+        <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
+
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="card">
+                <div class="circle">
+                    <img src="img/Albanileria.svg" alt="Albañilería">
+                </div>
+                <div class="content">
+                    <h2>Albañilería</h2>
                 </div>
             </div>
 
-            <!-- Botón Derecha -->
-            <button class="btn-next">
-                &#10095;
-            </button>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/Albanileria.svg" alt="Sanitaria">
+                </div>
+                <div class="content">
+                    <h2>Sanitaria</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="img/Albanileria.svg" alt="Electricidad">
+                </div>
+                <div>
+                    <ul>
+                        <li>Instalaciones eléctricas</li>
+                        <li>Reformas y obras</li>
+                        <li>Diagnóstico y reparación de fallas</li>
+                        <li>MEdición de tierra y fugas</li>
+                        <li>Tramites y regularización</li>
+                        <li>Proyectos eléctricos</li>
+                        <Li>Porteros eléctricos</Li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h2>Electricidad</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="img/Albanileria.svg" alt="Herrería">
+                </div>
+                <div class="content">
+                    <h2>Herrería</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="img/Albanileria.svg" alt="Pintura">
+                </div>
+                <div class="content">
+                    <h2>Pintura</h2>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+      
+        
+
+
+        <button class="mt-10 bg-yellow-500 px-6 py-3 text-white rounded-lg shadow-md hover:bg-yellow-400 transition">
+            CONSULTAR COTIZACIÓN
+        </button>
+    </section>
+
+    <!-- Otros Servicios -->
+    <section id="OtrosServicios" class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold mb-4 text-blue-800">Más servicios para tu hogar y empresa</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Además de nuestros servicios principales, ofrecemos una variedad
+            de soluciones para el mantenimiento y mejora de tu espacio.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/riego.svg" alt="Sistemas de riego" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Sistemas de riego</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/piscina.svg" alt="Mantenimiento de piscinas" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Mantenimiento de piscinas</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/jardines.svg" alt="Paisajismo y jardines" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Paisajismo y jardines</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/madera.svg" alt="Muebles en madera" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Muebles en madera</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/parquet.svg" alt="Pulido de parquet" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Pulido de parquet</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/roller.svg" alt="Cortinas roller" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Cortinas roller</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/toldo.svg" alt="Toldos parasoles" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Toldos parasoles</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/cercos.svg" alt="Cercos eléctricos" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Cercos eléctricos</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/cerrajeria.svg" alt="Cerrajería" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Cerrajería</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/persianas.svg" alt="Persianas" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Persianas</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/arreglos.svg" alt="Pequeños arreglos" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Pequeños arreglos</h3>
+            </div>
+
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:bg-blue-50 transition">
+                <img src="img/instalaciones.svg" alt="Instalaciones varias" class="h-12 mx-auto mb-3">
+                <h3 class="text-lg font-semibold text-gray-800">Instalaciones varias</h3>
+            </div>
+        </div>
+
+        <button class="mt-10 bg-yellow-500 px-6 py-3 text-white rounded-lg shadow-md hover:bg-yellow-400 transition">
+            CONSULTAR COTIZACIÓN
+        </button>
+    </section>
+
+    <!-- Contacto -->
+    <section id="Nosotros" class="py-16 bg-gray-100 text-gray-800">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="img/SobreNosotros.png" alt="Sobre Nosotros" class="rounded-2xl shadow-lg mx-auto md:w-10/12">
+            </div>
+
+            <div class="md:w-1/2 text-center md:text-left px-6">
+                <h2 class="text-4xl font-bold text-blue-800 mb-4">¿Quiénes somos?</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En Orlux, nos especializamos en construcción, mantenimiento y reparación.
+                    Ofrecemos soluciones en <span class="text-blue-700 font-semibold">electricidad, albañilería,
+                        sanitaria</span> y más,
+                    con un enfoque en calidad, seguridad y confianza.
+                </p>
+
+                <ul class="text-gray-700 space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <img src="img/check.svg" alt="✔" class="h-5 w-5 mr-2">
+                        Materiales y mano de obra de primera calidad.
+                    </li>
+                    <li class="flex items-center">
+                        <img src="img/check.svg" alt="✔" class="h-5 w-5 mr-2">
+                        Profesionales altamente capacitados.
+                    </li>
+                    <li class="flex items-center">
+                        <img src="img/check.svg" alt="✔" class="h-5 w-5 mr-2">
+                        Atención personalizada para cada proyecto.
+                    </li>
+                </ul>
+
+                <a href="#Contacto"
+                    class="bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">
+                    Contáctanos
+                </a>
+            </div>
         </div>
     </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+
+    <!-- Galería de Proyectos -->
+    <section id="Proyectos" class="py-16 px-4 bg-white">
+        <h2 class="text-center text-2xl font-bold mb-8">Nuestros Proyectos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <img src="img/Galeria1.png" alt="Proyecto 1" class="rounded-lg shadow-md w-full h-auto object-cover" />
+            <img src="img/Galeria2.png" alt="Proyecto 2" class="rounded-lg shadow-md w-full h-auto object-cover " />
+            <img src="img/Galeria3.png" alt="Proyecto 3" class="rounded-lg shadow-md w-full h-auto object-cover" />
+            <img src="img/Galeria4.png" alt="Proyecto 4" class="rounded-lg shadow-md w-full h-auto object-cover" />
+        </div>
+    </section>
+
+
+    <footer class="bg-black">
+        <div class="mx-auto max-w-5xl px-2 py-8 sm:px-6 lg:px-8">
+            <div class="flex justify-center text-teal-300">
+                <img src="img/Albanileria.svg" alt="">
+            </div>
+
+            <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
+                Lorem ipsum dolor.
+            </p>
+
+            <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+                <li>
+                    <a class="text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
+                        href="#">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                        href="#Servicios">
+                        Servicios
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                        href="#Proyectos">
+                        Proyectos
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                        href="#Nosotros">
+                        Nostros
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <footer class="text-gray-600 body-font">
+        <div class="container px-2 py-4 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Orilux</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                &copy; 2025 Orlux - Todos los derechos reservados
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
 </body>
+
+
 </html>

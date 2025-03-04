@@ -25,17 +25,14 @@ function actualizarCarrusel() {
     carrusel.style.transform = `translateX(-${desplazamiento}%)`;
 }*/
 
-const carrusel = document.querySelector('.carrusel');
+/*const carrusel = document.querySelector('.carrusel');
 const prevBtn = document.querySelector('.btn-prev');
 const nextBtn = document.querySelector('.btn-next');
 
 let index = 0;
 const totalCards = document.querySelectorAll('.card').length;
 let intervalo;
-/**
- * Mueve el carrusel en la dirección indicada.
- * @param {number} direccion -1 para atrás, 1 para adelante
- */
+
 
 function moverCarrusel(direccion){
     index += direccion;
@@ -82,4 +79,37 @@ function actualizarCarrusel() {
 }
 
 // Iniciar el autoplay al cargar la página
-iniciarAutoPlay();
+iniciarAutoPlay();*/
+/*
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let index = 0;
+const totalItems = document.querySelectorAll('.carousel-item').length;
+const visibleItems = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+const maxIndex = totalItems - visibleItems;
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if (index < maxIndex) {
+        index++;
+        updateCarousel();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (index > 0) {
+        index--;
+        updateCarousel();
+    }
+});
+
+window.addEventListener('resize', () => {
+    index = 0;
+    updateCarousel();
+});*/
+
