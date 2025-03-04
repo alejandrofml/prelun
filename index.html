@@ -44,7 +44,7 @@
     </section>
 
     <!-- Servicios -->
-    <section id="Servicios" class="py-16 bg-gray-100 text-center">
+    <!-- <section id="Servicios" class="py-16 bg-gray-100 text-center">
         <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
 
         <div class="flex flex-wrap justify-center gap-6">
@@ -108,14 +108,137 @@
                 <button onclick="nextSlide()">&#10095;</button>
             </div>
         </div>
-
-      
-        
-
-
         <button class="mt-10 bg-yellow-500 px-6 py-3 text-white rounded-lg shadow-md hover:bg-yellow-400 transition">
             CONSULTAR COTIZACIÓN
         </button>
+    </section> -->
+
+    <!-- <section id="Servicios" class="py-16 bg-gray-100 text-center">
+        <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
+        <div class="relative w-full overflow-hidden">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                <div class="card group shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:h-auto">
+                        <div class="circle p-6 ">
+                            <img src="img/Albanileria.svg" alt="Albañilería" class="mx-auto">
+                        </div>
+                        <div class="content p-4">
+                            <h2 class="text-lg font-bold">Albañilería</h2>
+                            <p class="hidden group-hover:block text-gray-600 mt-2">Construcción y reformas generales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card group shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:h-auto">
+                        <div class="circle p-6">
+                            <img src="img/Albanileria.svg" alt="Sanitaria" class="mx-auto">
+                        </div>
+                        <div class="content p-4">
+                            <h2 class="text-lg font-bold">Sanitaria</h2>
+                            <p class="hidden group-hover:block text-gray-600 mt-2">Instalación y reparación de sistemas sanitarios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card group shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:h-auto">
+                        <div class="circle p-6">
+                            <img src="img/Albanileria.svg" alt="Electricidad" class="mx-auto">
+                        </div>
+                        <div class="content p-4">
+                            <h2 class="text-lg font-bold">Electricidad</h2>
+                            <p class="hidden group-hover:block text-gray-600 mt-2">Instalaciones y mantenimiento eléctrico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card group shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:h-auto">
+                        <div class="circle p-6">
+                            <img src="img/Albanileria.svg" alt="Herrería" class="mx-auto">
+                        </div>
+                        <div class="content p-4">
+                            <h2 class="text-lg font-bold">Herrería</h2>
+                            <p class="hidden group-hover:block text-gray-600 mt-2">Rejas y cerrajes en hierro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card group shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:h-auto">
+                        <div class="circle p-6">
+                            <img src="img/Albanileria.svg" alt="Pintura" class="mx-auto">
+                        </div>
+                        <div class="content p-4">
+                            <h2 class="text-lg font-bold">Pintura</h2>
+                            <p class="hidden group-hover:block text-gray-600 mt-2">Pinturas exterieores e interiores.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-yellow-400">&#10094;</button>
+            <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-yellow-400">&#10095;</button>
+        </div>
+        <button class="mt-10 bg-yellow-500 px-6 py-3 text-white rounded-lg shadow-md hover:bg-yellow-400 transition">
+            Consultar Cotizacion
+        </button>
+    </section> -->
+
+    <section id="Servicios" class="py-16 bg-gray-100 text-center">
+        <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
+        <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                <div class="card bg-white shadow-lg rounded-xl w-64 p-6 flex-shrink-0 relative group overflow-hidden">
+                    <div class="circle bg-yellow-400 w-64 h-16 rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500 group-hover:h-48">
+                        <img src="img/Albanileria.svg" alt="Albañilería" class="mx-auto">
+                    </div>
+                    <div class="relative mt-12 text-center">
+                        <h2 class="font-bold text-lg">Albañilería</h2>
+                        <p class="text-sm text-gray-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100">Construcción y reformas.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg rounded-xl w-64 p-6 flex-shrink-0 relative group overflow-hidden">
+                    <div class="circle bg-blue-400 w-64 h-16 rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500 group-hover:h-48">
+                        <img src="img/Albanileria.svg" alt="Sanitaria" class="mx-auto">
+                    </div>
+                    <div class="relative mt-12 text-center">
+                        <h2 class="font-bold text-lg">Sanitaria</h2>
+                        <p class="text-sm text-gray-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100">Instalaciones y mantenimiento.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg rounded-xl w-64 p-6 flex-shrink-0 relative group overflow-hidden">
+                    <div class="circle bg-red-400 w-64 h-16 rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500 group-hover:h-48">
+                        <img src="img/Albanileria.svg" alt="Electricidad" class="mx-auto">
+                    </div>
+                    <div class="relative mt-12 text-center">
+                        <h2 class="font-bold text-lg">Electricidad</h2>
+                        <p class="text-sm text-gray-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100">Instalaciones y mantenimiento eléctrico.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg rounded-xl w-64 p-6 flex-shrink-0 relative group overflow-hidden">
+                    <div class="circle bg-violet-400 w-64 h-16 rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500 group-hover:h-48">
+                        <img src="img/Albanileria.svg" alt="Herrería" class="mx-auto">
+                    </div>
+                    <div class="relative mt-12 text-center">
+                        <h2 class="font-bold text-lg">Herrería</h2>
+                        <p class="text-sm text-gray-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100">Cerrajes en hierro interiores y exteriores.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg rounded-xl w-64 p-6 flex-shrink-0 relative group overflow-hidden">
+                    <div class="circle bg-green-400 w-64 h-16 rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500 group-hover:h-48">
+                        <img src="img/Albanileria.svg" alt="Pintura" class="mx-auto">
+                    </div>
+                    <div class="relative mt-12 text-center">
+                        <h2 class="font-bold text-lg">Pintura</h2>
+                        <p class="text-sm text-gray-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100">Pinturas exterieores e interiores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                <button onclick="prevSlide()" class="bg-gray-700 text-white px-3 py-2 rounded-full">&#10094;</button>
+            </div>
+            <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                <button onclick="nextSlide()" class="bg-gray-700 text-white px-3 py-2 rounded-full">&#10095;</button>
+            </div>
+        </div>
     </section>
 
     <!-- Otros Servicios -->
@@ -325,6 +448,53 @@
             document.getElementById("mobile-menu").classList.toggle("hidden");
         });
     </script>
+
+<!-- <script>
+    let currentIndex = 0;
+    function updateCarousel() {
+        const carousel = document.getElementById('carousel');
+        const slideWidth = document.querySelector('#carousel > div').offsetWidth;
+        carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+    function nextSlide() {
+        const totalSlides = document.querySelectorAll('#carousel > div').length;
+        const maxIndex = totalSlides - 1;
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+</script> -->
+<script>
+    let index = 0;
+    function updateCarousel() {
+        const carousel = document.getElementById('carousel');
+        const cardWidth = document.querySelector('.card').offsetWidth;
+        carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+    function prevSlide() {
+        if (index > 0) {
+            index--;
+            updateCarousel();
+        }
+    }
+    function nextSlide() {
+        const totalCards = document.querySelectorAll('.card').length;
+        if (index < totalCards - 1) {
+            index++;
+            updateCarousel();
+        }
+    }
+
+    
+</script>
+
 </body>
 
 
